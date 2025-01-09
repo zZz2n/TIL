@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스 외부 설정</title>
+  <!-- <link rel="stylesheet" href="_reset.css"> -->
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      border-width: 10px;
+      border-style: dotted;
+      border-color: bisque;
+      /* border: 10px dotted bisque; */
+    }
+
+    p {
+      width: 200px;
+      height: 200px;
+      border-top: 1px solid salmon;
+      border-right: 3px dashed darkkhaki;
+      border-bottom: 5px dotted darkcyan;
+      border-left: 8px none;
+      border-radius: 10% 25% 50% 80%;
+    }
+    .circle {
+      border-radius: 100%;
+      border: none;
+      background-color: tomato;
+      box-shadow: 2px 2px 10px -1px #353535;
+    }
+
+    .margin > div {
+      width: 200px;
+      height: 100px;
+      border: 10px none;
+      background-color: bisque;
+    }
+
+    .margin > .first {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .parent {
+      width: 300px;
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    .child {
+      width: 100px;
+      height: inherit;
+      background-color: #12ff18;
+      margin-left: auto;
+      border: 0px none;
+			/* margin-right: auto; */
+    }
+
+    .hidden {
+      height: 100px;
+      margin: none;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div>Learn</div>
+  <p>푸히히</p>
+  <div class="circle"></div>
+
+  <section class="margin">
+    <div class="first"></div>
+    <div></div>
+  </section>
+
+  <div class="hidden"></div>
+
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</body>
+</html>
