@@ -1,0 +1,28 @@
+.board {
+  width: 800px;
+  height: 800px;
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  width: 100%;
+  height: 12.5%;
+  background-color: antiquewhite;
+  display: flex;
+  border: 0px none;
+}
+
+ .row > div {
+  width: 12.5%;
+  height: 100%;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+} 
