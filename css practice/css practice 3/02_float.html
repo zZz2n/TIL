@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float 레이아웃을 활용한 마크업 하기</title>
+  <!-- float는 flexbox 나오고 나서는 잘 안쓴대요 -->
+  <style>
+    body {
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    article {
+      width: 60%;
+      float: left;
+    }
+
+    aside {
+      width: 40%;
+      float: right;
+    }
+
+    section::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Apparel Shop</h1>
+  </header>
+  <section>
+    <article>
+      <h2>Our Products</h2>
+      <h3>T-shirt</h3>
+      <p>Adipisicing pariatur esse commodo tempor sunt. Voluptate pariatur veniam veniam velit elit ipsum fugiat aliqua laboris aliquip aliquip. Tempor exercitation sunt consequat voluptate ea adipisicing. Dolor elit eu sunt duis mollit ipsum amet consequat reprehenderit. Eu nostrud minim esse nisi magna do excepteur adipisicing velit eu.</p>
+      <h3>Slack</h3>
+      <p>Adipisicing pariatur esse commodo tempor sunt. Voluptate pariatur veniam veniam velit elit ipsum fugiat aliqua laboris aliquip aliquip. Tempor exercitation sunt consequat voluptate ea adipisicing. Dolor elit eu sunt duis mollit ipsum amet consequat reprehenderit. Eu nostrud minim esse nisi magna do excepteur adipisicing velit eu.</p>
+      <h3>Shoes</h3>
+      <p>Adipisicing pariatur esse commodo tempor sunt. Voluptate pariatur veniam veniam velit elit ipsum fugiat aliqua laboris aliquip aliquip. Tempor exercitation sunt consequat voluptate ea adipisicing. Dolor elit eu sunt duis mollit ipsum amet consequat reprehenderit. Eu nostrud minim esse nisi magna do excepteur adipisicing velit eu.</p>
+    </article>
+    <aside>
+      <h2>Details</h2>
+      <p>Laboris tempor et laborum irure. Qui laborum elit commodo sint ullamco elit amet aliqua. Culpa irure pariatur proident non veniam ex officia mollit consequat anim amet ut amet cillum. Ipsum consectetur est aliqua irure voluptate qui officia ex enim esse id excepteur. Sint cillum aute cillum id aliquip cillum. Irure reprehenderit veniam ea irure ex commodo do voluptate sint eu aliquip et incididunt velit.
+
+Nulla minim ipsum officia minim aliqua ut deserunt Lorem. Laboris eu reprehenderit consectetur ea proident laboris proident fugiat. Sit sit ut nisi sit amet consequat nulla elit reprehenderit velit. Lorem anim incididunt pariatur reprehenderit ut esse minim ea mollit laborum ullamco laboris ad. Velit duis Lorem laborum quis magna veniam sunt Lorem ex.</p>
+    </aside>
+  </section>
+  <footer>
+    <h2>Copyright NODCREW</h2>
+  </footer>
+</body>
+</html>
