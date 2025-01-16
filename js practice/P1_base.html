@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>부트스트랩 Grid 시스템</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="row">
+        <div id="col1"></div>
+        <div id="col2"></div>
+        <div id="col3"></div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // 아래 JavaScript DOM 선택 및 조작 코드 작성
+      const container = document.querySelector('#container');
+      container.className = 'container text-center';
+
+      const row = document.querySelector('#row');
+      row.classList.add('row');
+
+      const cols = document.querySelectorAll('#row > div')
+      cols.forEach((col, index) => {
+        col.textContent = '컬럼'
+        col.classList.add('col');
+      })
+
+      cols[0].classList.add('bg-primary');
+      cols[1].classList.add('bg-info');
+      cols[2].classList.add('bg-danger');
+
+      console.log(cols[0]);
+
+    </script>
+  </body>
+</html>
