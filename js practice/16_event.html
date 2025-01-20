@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button id="my-button" name="my-button">클릭</button>
+
+    <script>
+      const button = document.querySelector('#my-button');
+
+      button.addEventListener('click', function (event) {
+        alert(`클릭한 요소의 id : ${event.target.id}`);
+        alert(`발생한 이벤트 : ${event.type}`);
+      });
+    </script>
+  </body>
+</html>

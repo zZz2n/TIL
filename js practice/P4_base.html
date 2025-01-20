@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      h1 {
+        color: #800000;
+        font-size: 3rem;
+      }
+      .menu-board {
+        margin: 0 auto;
+        width: 30%;
+      }
+      .menu-category {
+        font-size: 2rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .menu {
+        font-size: 1.5rem;
+        margin: 20px 0px 20px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu-name {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MENU</h1>
+    <div id="menu-board" class="menu-board"></div>
+
+    <script>
+      // 아래 JavaScript DOM 생성, 추가, 조작 코드 작성
+      const _body = document.querySelector('body');
+
+      const menuCategory = document.createElement('div');
+      menuCategory.className = 'menu-category';
+      menuCategory.textContent = 'COFFEE';
+      _body.appendChild(menuCategory);
+
+      const line = document.createElement('hr');
+      _body.appendChild(line);
+
+      const noname = document.createElement('div');
+      _body.appendChild(noname);
+
+
+
+    </script>
+  </body>
+</html>

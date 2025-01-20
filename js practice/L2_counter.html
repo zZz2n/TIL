@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1 -->
+    <h2>수동 카운터</h2>
+    <p class="p1">0</p>
+    <button class="minus"> - </button>
+    <button class="plus"> + </button>
+    <button class="reset">리셋</button>
+
+    <hr />
+    <!-- 2 -->
+    <h2>자동 카운터</h2>
+    <p class="p2">0</p>
+    <span>10이 되면 멈춥니다!</span>
+
+    <script>
+      const minus = document.querySelector('.minus');
+			const plus = document.querySelector('.plus');
+      const reset = document.querySelector('.reset');
+      const p1 = document.querySelector('.p1');
+
+      const changeBtn = function (event) {
+        let cnt = parseInt(p1.innerText);
+        if (event === 'plus'){
+          cnt++;
+        }else if(event === 'minus') {
+          cnt--;
+        }else if (event === 'reset') {
+          cnt = 0;
+        }
+        p1.innerText = cnt;
+      };
+
+      minus.addEventListener('click', () => changeBtn('minus'));
+      plus.addEventListener('click', () => changeBtn('plus'));
+      reset.addEventListener('click', () => changeBtn('reset'));
+
+      const p2 = document.querySelector('.p2');
+
+      const autoPlus = function() {
+        let autoCnt = parseInt(p2.innerText);
+
+        if (p2.innerText < 10){
+          autoCnt++;
+          p2.innerText = autoCnt;
+        } else {
+          clearInterval(interval);
+        }
+      }
+
+      let interval = setInterval(autoPlus, 100);
+      // // 빼기 버튼
+      // minus.addEventListener('click', function (event) {
+      //   let cnt = parseInt(p1.innerText);
+      //   cnt--;
+      //   p1.innerText = cnt;
+      // })
+
+      // // 더하기 버튼
+      // plus.addEventListener('click', function(event) {
+      //   let cnt = parseInt(p1.innerText);
+      //   cnt++;
+      //   p1.innerText = cnt;
+      // })
+
+      // // 리셋 버튼
+      // reset.addEventListener('click', function(event){
+      //   p1.innerText = 0;
+      // })
+    </script>
+  </body>
+</html>
